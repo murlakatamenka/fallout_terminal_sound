@@ -1,0 +1,20 @@
+[package]
+name = "fallout_terminal_sound"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies.rodio]
+# git = "https://github.com/RustAudio/rodio"
+# features = ["symphonia-wav"]
+version = "0.14"
+default-features = false
+features = ["wav"]
+
+[[bin]]
+name = "fo_term_sound"
+path = "src/main.rs"
+
+[profile.release]
+panic = "abort"
